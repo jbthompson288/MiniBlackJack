@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E21DFAD21D84608A00117EDC /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21DFAD11D84608A00117EDC /* NetworkController.swift */; };
 		E22CDA641D8459BA0087655E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22CDA631D8459BA0087655E /* AppDelegate.swift */; };
 		E22CDA661D8459BA0087655E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22CDA651D8459BA0087655E /* ViewController.swift */; };
 		E22CDA691D8459BA0087655E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22CDA671D8459BA0087655E /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E21DFAD11D84608A00117EDC /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		E22CDA601D8459BA0087655E /* MiniBlackJack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniBlackJack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22CDA631D8459BA0087655E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E22CDA651D8459BA0087655E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,14 +56,47 @@
 		E22CDA621D8459BA0087655E /* MiniBlackJack */ = {
 			isa = PBXGroup;
 			children = (
-				E22CDA631D8459BA0087655E /* AppDelegate.swift */,
-				E22CDA651D8459BA0087655E /* ViewController.swift */,
-				E22CDA671D8459BA0087655E /* Main.storyboard */,
-				E22CDA6A1D8459BA0087655E /* Assets.xcassets */,
-				E22CDA6C1D8459BA0087655E /* LaunchScreen.storyboard */,
-				E22CDA6F1D8459BA0087655E /* Info.plist */,
+				E22CDA781D845BC70087655E /* Core */,
+				E22CDA771D845BAB0087655E /* Model Controllers */,
+				E22CDA761D845B970087655E /* View Controllers */,
+				E22CDA751D845B8D0087655E /* Model Controllers */,
 			);
 			path = MiniBlackJack;
+			sourceTree = "<group>";
+		};
+		E22CDA751D845B8D0087655E /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		E22CDA761D845B970087655E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E22CDA651D8459BA0087655E /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E22CDA771D845BAB0087655E /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E21DFAD11D84608A00117EDC /* NetworkController.swift */,
+			);
+			name = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		E22CDA781D845BC70087655E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E22CDA6F1D8459BA0087655E /* Info.plist */,
+				E22CDA6C1D8459BA0087655E /* LaunchScreen.storyboard */,
+				E22CDA6A1D8459BA0087655E /* Assets.xcassets */,
+				E22CDA671D8459BA0087655E /* Main.storyboard */,
+				E22CDA631D8459BA0087655E /* AppDelegate.swift */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +172,7 @@
 			files = (
 				E22CDA661D8459BA0087655E /* ViewController.swift in Sources */,
 				E22CDA641D8459BA0087655E /* AppDelegate.swift in Sources */,
+				E21DFAD21D84608A00117EDC /* NetworkController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +324,7 @@
 				E22CDA741D8459BA0087655E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
