@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E21DFAD21D84608A00117EDC /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21DFAD11D84608A00117EDC /* NetworkController.swift */; };
+		E21DFAD41D846E9000117EDC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21DFAD31D846E9000117EDC /* Card.swift */; };
+		E21DFAD61D84728D00117EDC /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21DFAD51D84728D00117EDC /* CardController.swift */; };
 		E22CDA641D8459BA0087655E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22CDA631D8459BA0087655E /* AppDelegate.swift */; };
 		E22CDA661D8459BA0087655E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22CDA651D8459BA0087655E /* ViewController.swift */; };
 		E22CDA691D8459BA0087655E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22CDA671D8459BA0087655E /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		E21DFAD11D84608A00117EDC /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		E21DFAD31D846E9000117EDC /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		E21DFAD51D84728D00117EDC /* CardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
 		E22CDA601D8459BA0087655E /* MiniBlackJack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniBlackJack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22CDA631D8459BA0087655E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E22CDA651D8459BA0087655E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,16 +63,17 @@
 				E22CDA781D845BC70087655E /* Core */,
 				E22CDA771D845BAB0087655E /* Model Controllers */,
 				E22CDA761D845B970087655E /* View Controllers */,
-				E22CDA751D845B8D0087655E /* Model Controllers */,
+				E22CDA751D845B8D0087655E /* Model Objects */,
 			);
 			path = MiniBlackJack;
 			sourceTree = "<group>";
 		};
-		E22CDA751D845B8D0087655E /* Model Controllers */ = {
+		E22CDA751D845B8D0087655E /* Model Objects */ = {
 			isa = PBXGroup;
 			children = (
+				E21DFAD31D846E9000117EDC /* Card.swift */,
 			);
-			name = "Model Controllers";
+			name = "Model Objects";
 			sourceTree = "<group>";
 		};
 		E22CDA761D845B970087655E /* View Controllers */ = {
@@ -83,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				E21DFAD11D84608A00117EDC /* NetworkController.swift */,
+				E21DFAD51D84728D00117EDC /* CardController.swift */,
 			);
 			name = "Model Controllers";
 			sourceTree = "<group>";
@@ -170,9 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E21DFAD61D84728D00117EDC /* CardController.swift in Sources */,
 				E22CDA661D8459BA0087655E /* ViewController.swift in Sources */,
 				E22CDA641D8459BA0087655E /* AppDelegate.swift in Sources */,
 				E21DFAD21D84608A00117EDC /* NetworkController.swift in Sources */,
+				E21DFAD41D846E9000117EDC /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

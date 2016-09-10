@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class NetworkController {
     
@@ -30,13 +31,22 @@ class NetworkController {
         return json ?? nil
     }
     
-    //Put this in the plist
-    /*
-    <key>NSAppTransportSecurity</key>
-    <dict>
-    <!--Include to allow all connections (DANGER)-->
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
-    </dict>
-    */
+    static func imageForURL(urlString: String, completion: (image: UIImage?) -> Void) {
+        //Take URL
+        //Get Data from URL
+        //Get Image from Data
+        NetworkController.dataAtURL(urlString) { (data) in
+            guard let data = data else { completion(image: nil); return }
+            let image = UIImage(data: data)
+            
+            //we have an image
+            //put image on the main queue
+            //pass up the image
+            dispatch_async(dispatch_get_main_queue(), { 
+                completion(image: image)
+            })
+            
+        }
+        
+    }
 }
