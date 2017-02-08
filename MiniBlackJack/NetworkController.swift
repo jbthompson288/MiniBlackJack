@@ -11,39 +11,39 @@ import UIKit
 
 class NetworkController {
     
-    static func dataAtURL(urlString: String, completion: (data: NSData?) -> Void) {
-        guard let url = NSURL(string: urlString) else { completion(data: nil); return }
+    static func dataAtURL(_ urlString: String, completion: @escaping (_ data: Data?) -> Void) {
+        guard let url = URL(string: urlString) else { completion(nil); return }
         
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (dataFromURL, _, error) in
+        let task = URLSession.shared.dataTask(with: url, completionHandler: { (dataFromURL, _, error) in
             if let error = error {
                 print(error)
                 print(error.localizedDescription)
-                completion(data: nil)
+                completion(nil)
                 return
             }
-            completion(data: dataFromURL)
-        }
+            completion(dataFromURL)
+        }) 
         task.resume()
     }
     
-    static func jsonFromData(data: NSData) -> [String: AnyObject]? {
-        let json = try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [String: AnyObject]
+    static func jsonFromData(_ data: Data) -> [String: AnyObject]? {
+        let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: AnyObject]
         return json ?? nil
     }
     
-    static func imageForURL(urlString: String, completion: (image: UIImage?) -> Void) {
+    static func imageForURL(_ urlString: String, completion: @escaping (_ image: UIImage?) -> Void) {
         //Take URL
         //Get Data from URL
         //Get Image from Data
         NetworkController.dataAtURL(urlString) { (data) in
-            guard let data = data else { completion(image: nil); return }
+            guard let data = data else { completion(nil); return }
             let image = UIImage(data: data)
             
             //we have an image
             //put image on the main queue
             //pass up the image
-            dispatch_async(dispatch_get_main_queue(), { 
-                completion(image: image)
+            DispatchQueue.main.async(execute: { 
+                completion(image)
             })
             
         }

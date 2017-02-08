@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func playButtonTapped(sender: AnyObject) {
+    @IBAction func playButtonTapped(_ sender: AnyObject) {
         CardController.drawCards(2) { (cards) in
             NetworkController.imageForURL(cards[0].imageEndpoint, completion: { (image) in
                 self.leftImageView.image = image
